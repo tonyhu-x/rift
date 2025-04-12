@@ -1,4 +1,4 @@
-const ROLES = ["top", "jungle", "mid", "adc", "support"];
+const ROLES = ["top", "jungle", "mid", "bot", "support"];
 
 /**
  * Shuffles the array in place and returns it.
@@ -31,7 +31,7 @@ function createRoleMap(profiles) {
     top: [],
     jungle: [],
     mid: [],
-    adc: [],
+    bot: [],
     support: [],
   };
 

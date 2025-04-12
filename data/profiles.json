@@ -3,7 +3,7 @@
     "id": "alex",
     "name": "Alex",
     "username": "Wintermelon#Tea1",
-    "roles": ["mid", "top", "adc"]
+    "roles": ["mid", "top", "bot"]
   },
   {
     "id": "andrew",
@@ -15,7 +15,7 @@
     "id": "anthony",
     "name": "Anthony",
     "username": "Z28lCf1Nr8IRvT#1463I",
-    "roles": ["top", "adc", "support"]
+    "roles": ["top", "bot", "support"]
   },
   {
     "id": "arkady",
@@ -27,7 +27,7 @@
     "id": "cynthia",
     "name": "Cynthia",
     "username": "Ginseng#5537",
-    "roles": ["support", "jungle", "mid", "adc", "top"]
+    "roles": ["support", "jungle", "mid", "bot", "top"]
   },
   {
     "id": "flawnson",
@@ -45,13 +45,13 @@
     "id": "mitchel",
     "name": "Mitchel",
     "username": "serpenshonos#333",
-    "roles": ["mid", "adc", "support", "jungle"]
+    "roles": ["mid", "bot", "support", "jungle"]
   },
   {
     "id": "paula",
     "name": "Paula",
     "username": "Parkhangorodsky#NA1",
-    "roles": ["support", "mid", "adc"]
+    "roles": ["support", "mid", "bot"]
   },
   {
     "id": "ramy",
@@ -69,6 +69,6 @@
     "id": "tony",
     "name": "Tony",
     "username": "TonyXer#NA1",
-    "roles": ["adc", "support", "jungle", "mid", "top"]
+    "roles": ["bot", "support", "jungle", "mid", "top"]
   }
 ]

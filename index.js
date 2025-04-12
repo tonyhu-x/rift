@@ -2,7 +2,7 @@ const COLOURS = {
   top: "#ffadaf",
   jungle: "#fddfaf",
   mid: "#bfedd9",
-  adc: "#bdd5ef",
+  bot: "#bdd5ef",
   support: "#e3c4d9",
   // This is an even mix of all the colours above
   any: "#dfd0cd",
