@@ -33,7 +33,7 @@
     "id": "flawnson",
     "name": "Flawnson",
     "username": "flawnson#flawn",
-    "roles": ["top", "mid", "jungle"]
+    "roles": ["top", "bot", "jungle", "mid", "support"]
   },
   {
     "id": "jason",
