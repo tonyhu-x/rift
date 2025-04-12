@@ -57,7 +57,7 @@
     "id": "ramy",
     "name": "Ramy",
     "username": "mouffette#NA1",
-    "roles": ["support"]
+    "roles": ["support", "mid", "bot"]
   },
   {
     "id": "ryan",
