@@ -1,5 +1,35 @@
 [
   {
+    "id": "alex",
+    "name": "Alex",
+    "username": "Wintermelon#Tea1",
+    "role": "mid"
+  },
+  {
+    "id": "andrew",
+    "name": "Andrew",
+    "username": "wllnumber1fan#NA1",
+    "role": "top"
+  },
+  {
+    "id": "anthony",
+    "name": "Anthony",
+    "username": "Z28lCf1Nr8IRvT#1463I",
+    "role": "top"
+  },
+  {
+    "id": "arkady",
+    "name": "Arkady",
+    "username": "arkangaroo#NA0",
+    "role": "top"
+  },
+  {
+    "id": "cynthia",
+    "name": "Cynthia",
+    "username": "Ginseng#5537",
+    "role": "support"
+  },
+  {
     "id": "flawnson",
     "name": "Flawnson",
     "username": "flawnson#flawn",
@@ -12,6 +42,12 @@
     "role": "jungle"
   },
   {
+    "id": "mitchel",
+    "name": "Mitchel",
+    "username": "serpenshonos#333",
+    "role": "mid"
+  },
+  {
     "id": "paula",
     "name": "Paula",
     "username": "Parkhangorodsky#NA1",
@@ -22,6 +58,11 @@
     "name": "Ramy",
     "username": "mouffette#NA1",
     "role": "support"
+  },
+  {
+    "id": "ryan",
+    "name": "Ryan",
+    "username": "Zazyrx#NA1"
   },
   { "id": "tony", "name": "Tony", "username": "TonyXer#NA1", "role": "adc" }
 ]

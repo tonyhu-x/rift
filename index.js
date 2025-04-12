@@ -4,7 +4,8 @@ const COLOURS = {
   mid: "#bfedd9",
   adc: "#bdd5ef",
   support: "#e3c4d9",
-  default: "#ffffff",
+  // This is an even mix of all the colours above
+  default: "#dfd0cd",
 };
 
 /**
@@ -28,7 +29,7 @@ const options = {
   },
   physics: {
     barnesHut: {
-      springLength: 250,
+      springLength: 350,
     },
   },
 };

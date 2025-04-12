@@ -1,6 +1,23 @@
 [
+  { "from": "alex", "to": "anthony", "label": "dragonboat team" },
+  { "from": "alex", "to": "paula", "label": "dragonboat team" },
+  { "from": "alex", "to": "tony", "label": "dragonboat team" },
+  { "from": "andrew", "to": "flawnson", "label": "primary school friend" },
+  { "from": "anthony", "to": "paula", "label": "dragonboat team" },
+  { "from": "anthony", "to": "tony", "label": "dragonboat team" },
+  { "from": "arkady", "to": "paula", "label": "sibling" },
+  {
+    "from": "cynthia",
+    "to": "paula",
+    "label": "university friend (linguistics)"
+  },
+  { "from": "flawnson", "to": "mitchel", "label": "startup incubator" },
   { "from": "flawnson", "to": "ramy", "label": "partner" },
   { "from": "jason", "to": "tony", "label": "high school friend" },
-  { "from": "paula", "to": "tony", "label": "partner" },
-  { "from": "paula", "to": "ramy", "label": "friend" }
+  {
+    "from": "paula",
+    "to": "ramy",
+    "label": "university friend (math pset partner)"
+  },
+  { "from": "paula", "to": "tony", "label": "partner" }
 ]
