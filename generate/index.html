@@ -41,6 +41,37 @@
         font-size: 1.2em;
         margin: 5px 0;
       }
+
+      .player-selection {
+        margin: 20px 0;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .player-checkbox {
+        display: inline-block;
+        margin: 5px 10px;
+        padding: 5px 10px;
+        background-color: #f5f5f5;
+        border-radius: 3px;
+      }
+
+      .generate-button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 1.1em;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .generate-button:hover {
+        background-color: #45a049;
+      }
     </style>
     <!-- Favicon -->
     <link
@@ -78,6 +109,11 @@
   </head>
   <body>
     <h1>Generate a roster</h1>
+    <div class="player-selection">
+      <h2>Select Players</h2>
+      <div id="player-checkboxes"></div>
+    </div>
+    <button class="generate-button" id="generate-button">Generate Teams</button>
     <div class="teams-container">
       <div class="team">
         <h2>Team 1</h2>

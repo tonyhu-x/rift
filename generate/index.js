@@ -125,6 +125,50 @@ function displayTeams(teams, profiles) {
   });
 }
 
+function displayPlayerCheckboxes(profiles) {
+  const container = document.getElementById("player-checkboxes");
+  container.innerHTML = profiles
+    .map(
+      (profile) => `
+    <label class="player-checkbox">
+      <input type="checkbox" value="${profile.id}" checked>
+      ${profile.name}
+    </label>
+  `,
+    )
+    .join("");
+}
+
+function getSelectedPlayers(profiles) {
+  const selectedIds = [
+    ...document.querySelectorAll("#player-checkboxes input:checked"),
+  ].map((checkbox) => checkbox.value);
+  return profiles.filter((profile) => selectedIds.includes(profile.id));
+}
+
+function generateTeams() {
+  const selectedPlayers = getSelectedPlayers(profiles);
+
+  // Check if we have enough players
+  if (selectedPlayers.length < 10) {
+    alert("Please select at least 10 players to generate teams");
+    return;
+  }
+
+  const teams = assignTeams(selectedPlayers);
+  if (teams) {
+    displayTeams(teams, profiles);
+  } else {
+    alert(
+      "Could not generate valid teams with the selected players. Please try different selections.",
+    );
+  }
+}
+
 let profiles = await (await fetch("/data/profiles.json")).json();
-let teams = assignTeams(profiles);
-displayTeams(teams, profiles);
+
+displayPlayerCheckboxes(profiles);
+
+document
+  .getElementById("generate-button")
+  .addEventListener("click", generateTeams);
