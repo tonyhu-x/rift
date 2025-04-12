@@ -49,10 +49,6 @@ function createRoleMap(profiles) {
 
 /**
  * Greedy algorithm that assigns players to teams role by role.
- *
- * Currently, the only random part of this algorithm is in the role selection
- * order (and converting "any" to role preferences). However, if each player
- * has enough roles playable, this should still give a good number of possible teams.
  */
 function assignTeams(profiles) {
   const roleToPlayers = createRoleMap(profiles);
@@ -155,7 +151,11 @@ function generateTeams() {
     return;
   }
 
-  const teams = assignTeams(selectedPlayers);
+  // This shuffle effectively randomizes the role-to-player map, so that
+  // people with the same preference level for a role do not always get
+  // sorted alphabetically. In future, this can be replaced by a random error
+  // added to the preference level.
+  const teams = assignTeams(shuffle(selectedPlayers));
   if (teams) {
     displayTeams(teams, profiles);
   } else {
