@@ -50,8 +50,8 @@ const options = {
 };
 
 let [profiles, relations] = await Promise.all([
-  (async () => (await fetch("/data/profiles.json")).json())(),
-  (async () => (await fetch("/data/relations.json")).json())(),
+  (async () => (await fetch("./data/profiles.json")).json())(),
+  (async () => (await fetch("./data/relations.json")).json())(),
 ]);
 
 profiles = profiles.map((profile) => ({

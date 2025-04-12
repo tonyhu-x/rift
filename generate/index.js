@@ -165,7 +165,7 @@ function generateTeams() {
   }
 }
 
-let profiles = await (await fetch("/data/profiles.json")).json();
+let profiles = await (await fetch("../data/profiles.json")).json();
 
 displayPlayerCheckboxes(profiles);
 
