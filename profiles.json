@@ -3,66 +3,72 @@
     "id": "alex",
     "name": "Alex",
     "username": "Wintermelon#Tea1",
-    "role": "mid"
+    "roles": ["mid"]
   },
   {
     "id": "andrew",
     "name": "Andrew",
     "username": "wllnumber1fan#NA1",
-    "role": "top"
+    "roles": ["top"]
   },
   {
     "id": "anthony",
     "name": "Anthony",
     "username": "Z28lCf1Nr8IRvT#1463I",
-    "role": "top"
+    "roles": ["top"]
   },
   {
     "id": "arkady",
     "name": "Arkady",
     "username": "arkangaroo#NA0",
-    "role": "top"
+    "roles": ["top"]
   },
   {
     "id": "cynthia",
     "name": "Cynthia",
     "username": "Ginseng#5537",
-    "role": "support"
+    "roles": ["support"]
   },
   {
     "id": "flawnson",
     "name": "Flawnson",
     "username": "flawnson#flawn",
-    "role": "top"
+    "roles": ["top", "mid", "jungle"]
   },
   {
     "id": "jason",
     "name": "Jason",
     "username": "JasonXer#2479",
-    "role": "jungle"
+    "roles": ["jungle", "support"]
   },
   {
     "id": "mitchel",
     "name": "Mitchel",
     "username": "serpenshonos#333",
-    "role": "mid"
+    "roles": ["mid"]
   },
   {
     "id": "paula",
     "name": "Paula",
     "username": "Parkhangorodsky#NA1",
-    "role": "support"
+    "roles": ["support"]
   },
   {
     "id": "ramy",
     "name": "Ramy",
     "username": "mouffette#NA1",
-    "role": "support"
+    "roles": ["support"]
   },
   {
     "id": "ryan",
     "name": "Ryan",
-    "username": "Zazyrx#NA1"
+    "username": "Zazyrx#NA1",
+    "roles": "any"
   },
-  { "id": "tony", "name": "Tony", "username": "TonyXer#NA1", "role": "adc" }
+  {
+    "id": "tony",
+    "name": "Tony",
+    "username": "TonyXer#NA1",
+    "roles": ["adc", "support", "jungle", "mid", "top"]
+  }
 ]
