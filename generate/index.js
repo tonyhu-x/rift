@@ -1,0 +1,130 @@
+const ROLES = ["top", "jungle", "mid", "adc", "support"];
+
+/**
+ * Shuffles the array in place and returns it.
+ */
+function shuffle(array) {
+  let currentIndex = array.length;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+    // Pick a remaining element...
+    let randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+
+  return array;
+}
+
+/**
+ * Create a map of role -> list of players who can play it
+ */
+function createRoleMap(profiles) {
+  // Create a map of role -> list of players who can play it
+  const roleToPlayers = {
+    top: [],
+    jungle: [],
+    mid: [],
+    adc: [],
+    support: [],
+  };
+
+  for (const profile of profiles) {
+    const roles = profile.roles === "any" ? shuffle([...ROLES]) : profile.roles;
+
+    roles.forEach((role, index) => {
+      // Include the index to track preference (lower is better)
+      roleToPlayers[role].push({ id: profile.id, preference: index });
+    });
+  }
+
+  return roleToPlayers;
+}
+
+/**
+ * Greedy algorithm that assigns players to teams role by role.
+ *
+ * Currently, the only random part of this algorithm is in the role selection
+ * order (and converting "any" to role preferences). However, if each player
+ * has enough roles playable, this should still give a good number of possible teams.
+ */
+function assignTeams(profiles) {
+  const roleToPlayers = createRoleMap(profiles);
+
+  // Try multiple times to find a valid solution
+  for (let attempt = 0; attempt < 100; attempt++) {
+    const team1 = {};
+    const team2 = {};
+    const usedPlayers = new Set();
+
+    // Randomize role order to avoid always giving certain roles priority
+    const shuffledRoles = shuffle([...ROLES]);
+
+    let valid = true;
+    for (const role of shuffledRoles) {
+      // Filter and sort players by their preference for this role
+      let availablePlayers = roleToPlayers[role]
+        .filter((player) => !usedPlayers.has(player.id))
+        .sort((a, b) => a.preference - b.preference);
+
+      if (availablePlayers.length < 2) {
+        valid = false;
+        break;
+      }
+
+      // Assign the first two players to team 1 and 2 randomly.
+      // This is to prevent team 1 always getting the player that has higher
+      // preference to this role.
+      const chosenPlayers = shuffle(availablePlayers.slice(0, 2));
+      team1[role] = chosenPlayers[0].id;
+      team2[role] = chosenPlayers[1].id;
+      usedPlayers.add(chosenPlayers[0].id);
+      usedPlayers.add(chosenPlayers[1].id);
+    }
+
+    if (valid) {
+      return { team1, team2 };
+    }
+  }
+
+  return null;
+}
+
+function displayTeams(teams, profiles) {
+  const profileMap = Object.fromEntries(profiles.map((p) => [p.id, p]));
+
+  const team1Element = document.getElementById("team1");
+  const team2Element = document.getElementById("team2");
+
+  team1Element.innerHTML = "";
+  team2Element.innerHTML = "";
+
+  ROLES.forEach((role) => {
+    const player1 = profileMap[teams.team1[role]];
+    const player2 = profileMap[teams.team2[role]];
+
+    team1Element.innerHTML += `
+            <div class="player">
+                <div class="role">${role.toUpperCase()}</div>
+                <div class="name">${player1.name}</div>
+            </div>
+        `;
+
+    team2Element.innerHTML += `
+            <div class="player">
+                <div class="role">${role.toUpperCase()}</div>
+                <div class="name">${player2.name}</div>
+            </div>
+        `;
+  });
+}
+
+let profiles = await (await fetch("/data/profiles.json")).json();
+let teams = assignTeams(profiles);
+displayTeams(teams, profiles);
