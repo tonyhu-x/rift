@@ -1,0 +1,27 @@
+[
+  {
+    "id": "flawnson",
+    "name": "Flawnson",
+    "username": "flawnson#flawn",
+    "role": "top"
+  },
+  {
+    "id": "jason",
+    "name": "Jason",
+    "username": "JasonXer#2479",
+    "role": "jungle"
+  },
+  {
+    "id": "paula",
+    "name": "Paula",
+    "username": "Parkhangorodsky#NA1",
+    "role": "support"
+  },
+  {
+    "id": "ramy",
+    "name": "Ramy",
+    "username": "mouffette#NA1",
+    "role": "support"
+  },
+  { "id": "tony", "name": "Tony", "username": "TonyXer#NA1", "role": "adc" }
+]

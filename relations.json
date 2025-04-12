@@ -1,0 +1,6 @@
+[
+  { "from": "flawnson", "to": "ramy", "label": "partner" },
+  { "from": "jason", "to": "tony", "label": "high school friend" },
+  { "from": "paula", "to": "tony", "label": "partner" },
+  { "from": "paula", "to": "ramy", "label": "friend" }
+]

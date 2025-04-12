@@ -33,20 +33,13 @@ const options = {
   },
 };
 
-// Create nodes (people)
-// Nodes are organized alphabetically
-let nodes = new vis.DataSet([
-  { id: "flawnson", name: "Flawnson", username: "flawnson#flawn", role: "top" },
-  { id: "jason", name: "Jason", username: "JasonXer#2479", role: "jungle" },
-  {
-    id: "paula",
-    name: "Paula",
-    username: "Parkhangorodsky#NA1",
-    role: "support",
-  },
-  { id: "ramy", name: "Ramy", username: "mouffette#NA1", role: "support" },
-  { id: "tony", name: "Tony", username: "TonyXer#NA1", role: "adc" },
+let [profiles, relations] = await Promise.all([
+  (async () => (await fetch("profiles.json")).json())(),
+  (async () => (await fetch("relations.json")).json())(),
 ]);
+
+let nodes = new vis.DataSet(profiles);
+const edges = new vis.DataSet(relations);
 
 nodes = nodes.map((node) => ({
   ...node,
@@ -56,17 +49,6 @@ nodes = nodes.map((node) => ({
     border: COLOURS[node.role ?? "default"],
   },
 }));
-
-// Create edges (relationships)
-// Edges are organized alphabetically. Bidirectional edges are always specified
-// such that the `id` that comes first when sorted alphebetically becomes the
-// `from` field.
-const edges = new vis.DataSet([
-  { from: "flawnson", to: "ramy", label: "partner" },
-  { from: "jason", to: "tony", label: "high school friend" },
-  { from: "paula", to: "tony", label: "partner" },
-  { from: "paula", to: "ramy", label: "friend" },
-]);
 
 // Create a network
 const container = document.getElementById("diagram");
