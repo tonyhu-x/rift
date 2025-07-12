@@ -33,7 +33,13 @@
     "id": "flawnson",
     "name": "Flawnson",
     "username": "flawnson#flawn",
-    "roles": ["top", "bot", "jungle", "mid", "support"]
+    "roles": ["top", "mid", "bot", "jungle", "support"]
+  },
+  {
+    "id": "fu",
+    "name": "Fu",
+    "username": "fufu#NAI",
+    "roles": ["bot", "mid", "top"]
   },
   {
     "id": "jasmine",
@@ -50,14 +56,14 @@
   {
     "id": "luca",
     "name": "Luca",
-    "username": "???",
-    "roles": ["jungle", "top", "mid"]
+    "username": "colonelcrazyy#NA1",
+    "roles": ["top", "jungle", "mid"]
   },
   {
     "id": "mitchel",
     "name": "Mitchel",
     "username": "thisismitch#333",
-    "roles": ["mid", "bot", "support", "jungle"]
+    "roles": ["top", "support", "mid", "bot", "jungle"]
   },
   {
     "id": "paula",
