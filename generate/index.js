@@ -26,7 +26,6 @@ function shuffle(array) {
  * Create a map of role -> list of players who can play it
  */
 function createRoleMap(profiles) {
-  // Create a map of role -> list of players who can play it
   const roleToPlayers = {
     top: [],
     jungle: [],
