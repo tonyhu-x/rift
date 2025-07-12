@@ -11,9 +11,13 @@
     "to": "paula",
     "label": "university friend (linguistics)"
   },
+  { "from": "flawnson", "to": "jasmine", "label": "sibling" },
   { "from": "flawnson", "to": "mitchel", "label": "startup incubator" },
   { "from": "flawnson", "to": "ramy", "label": "partner" },
+  { "from": "jasmine", "to": "ramy", "label": "friend" },
   { "from": "jason", "to": "tony", "label": "high school friend" },
+  { "from": "luca", "to": "mitchel", "label": "friend" },
+  { "from": "mitchel", "to": "ryan", "label": "friend" },
   {
     "from": "paula",
     "to": "ramy",

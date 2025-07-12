@@ -36,15 +36,27 @@
     "roles": ["top", "bot", "jungle", "mid", "support"]
   },
   {
+    "id": "jasmine",
+    "name": "Jasmine",
+    "username": "???",
+    "roles": ["bot", "support", "mid"]
+  },
+  {
     "id": "jason",
     "name": "Jason",
     "username": "JasonXer#2479",
     "roles": ["jungle", "mid", "support"]
   },
   {
+    "id": "luca",
+    "name": "Luca",
+    "username": "???",
+    "roles": ["jungle", "top", "mid"]
+  },
+  {
     "id": "mitchel",
     "name": "Mitchel",
-    "username": "serpenshonos#333",
+    "username": "thisismitch#333",
     "roles": ["mid", "bot", "support", "jungle"]
   },
   {
